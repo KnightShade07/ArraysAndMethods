@@ -15,24 +15,39 @@ namespace ArraysAndMethods
         //This method repeatedly asks a user for a number (up to 10 total numbers) or they can stop early by entering 0.
         public static int[] enterNumberList()
         {
+            int[] numbers = new int[10];
+            //placeholder value for the user's integers.
+            int x = 0;
+            //placeholder string for the user's integers.
+            string enterNumsString = "";
+            int numCounter = -1;
             bool enterNums = true;
+
             Console.WriteLine("Enter some numbers, you can enter up to 10, enter 0 to quit early.");
             while(enterNums)
             {
-                  string numInput = Console.ReadLine();
-                  if(numInput == "0")
-                   {
-                     enterNums = false;
-                   }
+                if(enterNumsString == "0")
+                {
+                  enterNums = false;
+                }
+                else
+                {
+                    enterNumsString = Console.ReadLine();
+                    numbers[x] = Convert.ToInt32(enterNumsString);
+                    x++;
+                    numCounter++;
+                }
+
+                
             }
 
-            int[] numbers = { };
+            
             return numbers;
         }
         //This method takes an array as a parameter, copies that array and doubles each element, and returns the copy array.
         public static int[]copyArrayAndDouble(int[]numbers)
         {
-            int[] doubledCopyArray = { };
+            
             return doubledCopyArray;
         }
         //This method displays the original array and the copy array with the doubled values afterwards.
