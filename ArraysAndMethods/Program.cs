@@ -5,24 +5,33 @@ namespace ArraysAndMethods
 {
     class Program
     {
+        //***Write the program without any class scoped variables***
+
         static void Main(string[] args)
         {
             enterNumberList();
-            copyArray();
             displayArray();
         }
-
+        //This method repeatedly asks a user for a number (up to 10 total numbers) or they can stop early by entering 0.
         public static int[] enterNumberList()
         {
-            return enterNumberList(); //placeholder
+            bool enterNums = true;
+            Console.WriteLine("Enter some numbers, you can enter up to 10, enter 0 to quit early.");
+            while(enterNums)
+            {
+                  string numInput = Console.ReadLine();
+            }
+            int[] numbers = { };
+            return numbers;
         }
-
-        public static int[]copyArray()
+        //This method takes an array as a parameter, copies that array and doubles each element, and returns the copy array.
+        public static int[]copyArrayAndDouble(int[]numbers)
         {
-            return copyArray();
+            int[] doubledCopyArray = { };
+            return doubledCopyArray;
         }
-
-        public  static int[] displayArray(/*Takes the two arrays as parameters.*/) //Test
+        //This method displays the original array and the copy array with the doubled values afterwards.
+        public static int[] displayArray(/*Takes the two arrays as parameters.*/)
         {
             return displayArray();
         }
