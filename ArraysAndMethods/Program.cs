@@ -12,11 +12,9 @@ namespace ArraysAndMethods
             displayArray();
         }
 
-        public static void enterNumberList()
+        public static int[] enterNumberList()
         {
-            int test = 0;
-
-
+            return enterNumberList(); //placeholder
         }
 
         public static int[]copyArray()
