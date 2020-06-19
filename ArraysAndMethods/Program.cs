@@ -17,25 +17,25 @@ namespace ArraysAndMethods
         {
             int[] numbers = new int[10];
             //placeholder value for the user's integers.
-            int x = 0;
+            int numCounter = 0;
             //placeholder string for the user's integers.
             string enterNumsString = "";
 
-            int numCounter = -1;
+            
             bool enterNums = true;
 
             Console.WriteLine("Enter some numbers, you can enter up to 10, enter 0 to quit early.");
             while(enterNums)
             {
-                if(enterNumsString == "0")
+                enterNumsString = Console.ReadLine();
+                if (enterNumsString == "0")
                 {
                   enterNums = false;
                 }
                 else
                 {
-                    enterNumsString = Console.ReadLine();
-                    numbers[x] = Convert.ToInt32(enterNumsString);
-                    x++;
+                    
+                    numbers[numCounter] = Convert.ToInt32(enterNumsString);
                     numCounter++;
                 }
 
@@ -46,10 +46,10 @@ namespace ArraysAndMethods
 
                 
             }
-
-            for(int i = 0; i > numbers.Length; i++)
+            //Tests output of array
+            for(int i = 0; i < numCounter; i++)
             {
-                Console.WriteLine(numbers);
+                Console.WriteLine(numbers[i]);
             }
 
             
