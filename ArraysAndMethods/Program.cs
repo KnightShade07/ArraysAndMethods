@@ -10,7 +10,7 @@ namespace ArraysAndMethods
         static void Main(string[] args)
         {
             enterNumberList();
-            displayArray();
+            //displayArray();
         }
         //This method repeatedly asks a user for a number (up to 10 total numbers) or they can stop early by entering 0.
         public static int[] enterNumberList()
@@ -20,6 +20,7 @@ namespace ArraysAndMethods
             int x = 0;
             //placeholder string for the user's integers.
             string enterNumsString = "";
+
             int numCounter = -1;
             bool enterNums = true;
 
@@ -38,18 +39,29 @@ namespace ArraysAndMethods
                     numCounter++;
                 }
 
+                if (numCounter == 10)
+                {
+                    enterNums = false;
+                }
+
                 
+            }
+
+            for(int i = 0; i > numbers.Length; i++)
+            {
+                Console.WriteLine(numbers);
             }
 
             
             return numbers;
         }
         //This method takes an array as a parameter, copies that array and doubles each element, and returns the copy array.
-        public static int[]copyArrayAndDouble(int[]numbers)
+       /* public static int[]copyArrayAndDouble(int[]numbers)
         {
-            
+           
             return doubledCopyArray;
-        }
+        } */
+
         //This method displays the original array and the copy array with the doubled values afterwards.
         public static int[] displayArray(/*Takes the two arrays as parameters.*/)
         {
