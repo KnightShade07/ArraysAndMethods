@@ -20,7 +20,12 @@ namespace ArraysAndMethods
             while(enterNums)
             {
                   string numInput = Console.ReadLine();
+                  if(numInput = "0")
+                   {
+                     enterNums = false;
+                   }
             }
+
             int[] numbers = { };
             return numbers;
         }
